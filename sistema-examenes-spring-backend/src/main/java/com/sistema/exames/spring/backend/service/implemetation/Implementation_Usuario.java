@@ -20,7 +20,7 @@ public class Implementation_Usuario implements Service_Usuario {
     @Override
     public Model_Usuario guardarUsuario(Model_Usuario usuarioGuardar, Set<Model_UsuarioRol> usuarioRoles) throws Exception {
 
-        Model_Usuario usuario = repositoryUsuario.findByUserName(usuarioGuardar.getUserName());
+        Model_Usuario usuario = repositoryUsuario.findByUsername(usuarioGuardar.getUsername());
 
         if (usuario != null) {
             System.out.println("El username ya exite");
@@ -32,6 +32,16 @@ public class Implementation_Usuario implements Service_Usuario {
             usuarioGuardar.getUsuariosRoles().addAll(usuarioRoles);
             return repositoryUsuario.save(usuarioGuardar);
         }
+    }
+
+    @Override
+    public Model_Usuario obtenerUsuario(String username) {
+        return repositoryUsuario.findByUsername(username);
+    }
+
+    @Override
+    public void eliminarUsuario(Long usuarioIde) {
+        repositoryUsuario.deleteById(usuarioIde);
     }
 
 }

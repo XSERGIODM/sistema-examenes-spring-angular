@@ -19,7 +19,7 @@ public class Model_UsuarioRol {
     @ManyToOne(fetch = FetchType.EAGER)
     private Model_Usuario usuario;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Model_Rol rol;
 
     public Model_UsuarioRol() {

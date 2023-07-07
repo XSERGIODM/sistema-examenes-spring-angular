@@ -1,5 +1,6 @@
 package com.sistema.exames.spring.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +19,7 @@ public class Model_Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userName;
+    private String username;
     private String password;
     private String nombre;
     private String apellido;
@@ -28,6 +29,7 @@ public class Model_Usuario {
     private String perfil;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<Model_UsuarioRol> usuariosRoles = new LinkedHashSet<>();
 
     public Model_Usuario() {

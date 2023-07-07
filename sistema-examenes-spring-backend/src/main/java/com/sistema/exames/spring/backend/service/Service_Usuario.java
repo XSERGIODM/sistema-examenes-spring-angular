@@ -8,4 +8,6 @@ import java.util.Set;
 public interface Service_Usuario {
 
     Model_Usuario guardarUsuario(Model_Usuario usuarioGuardar, Set<Model_UsuarioRol> usuarioRoles) throws Exception;
+    Model_Usuario obtenerUsuario (String username);
+    void eliminarUsuario(Long usuarioIde);
 }

@@ -20,7 +20,7 @@ public class Model_Rol {
 
     private String nombre;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "rol", fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "rol", fetch = FetchType.LAZY)
     private Set<Model_UsuarioRol> usuariosRoles = new LinkedHashSet<>();
 
     public Model_Rol() {
