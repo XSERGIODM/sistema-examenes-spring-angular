@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity(name = "roles")
-public class Modle_Rol {
+public class Model_Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,6 @@ public class Modle_Rol {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "rol", fetch = FetchType.EAGER)
     private Set<Model_UsuarioRol> usuariosRoles = new LinkedHashSet<>();
 
-    public Modle_Rol() {
+    public Model_Rol() {
     }
 }
