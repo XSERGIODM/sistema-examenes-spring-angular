@@ -12,6 +12,9 @@ import { LoginComponent } from './page/login/login.component';
 import {NgOptimizedImage} from "@angular/common";
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import {MatInputModule} from "@angular/material/input";
     MatButtonModule,
     NgOptimizedImage,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

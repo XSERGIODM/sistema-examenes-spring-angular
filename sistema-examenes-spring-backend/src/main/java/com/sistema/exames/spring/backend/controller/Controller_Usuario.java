@@ -14,13 +14,14 @@ import java.util.Set;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/usuarios")
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class Controller_Usuario {
 
     private final Service_Usuario serviceUsuario;
 
     @PostMapping("/")
     public Model_Usuario crearUsuario(@RequestBody Model_Usuario usuarioBody) throws Exception {
-
+        usuarioBody.setPerfil("default.png");
         Set<Model_UsuarioRol> usuarioRols = new LinkedHashSet<>();
 
         Model_Rol rol = new Model_Rol();

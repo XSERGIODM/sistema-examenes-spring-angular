@@ -25,7 +25,7 @@ public class Model_Usuario {
     private String apellido;
     private String email;
     private String telefono;
-    private Boolean enabled;
+    private Boolean enabled = true;
     private String perfil;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.EAGER)
