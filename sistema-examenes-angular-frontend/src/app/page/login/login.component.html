@@ -1,1 +1,56 @@
-<p>login works!</p>
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <div class="container text-center">
+            <img
+              ngSrc="assets/user-svgrepo-com.svg" priority="" width="100" height="100" alt=""
+            >
+          </div>
+          <h1 class="text-center">
+            Inicio de sesion
+          </h1>
+
+          <br>
+
+          <form action="">
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Usuario</mat-label>
+              <input required type="text" matInput
+                     placeholder="Digite su usuario por favor">
+              <mat-hint>El nombre de usuario debe ser valido</mat-hint>
+            </mat-form-field>
+
+            <br><br>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Contraseña</mat-label>
+              <input required type="password" matInput placeholder="Digite su contraseña por favor">
+              <mat-hint>La contraseña debe ser valido</mat-hint>
+            </mat-form-field>
+
+            <br><br><br>
+
+            <div class="container text-center">
+
+              <button mat-raised-button color="primary" type="submit">
+                Registrar
+              </button>
+
+              <button mat-raised-button color="accent" style="margin-left: 20px" type="reset">
+                Limpiar
+              </button>
+
+            </div>
+
+            <br>
+
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+

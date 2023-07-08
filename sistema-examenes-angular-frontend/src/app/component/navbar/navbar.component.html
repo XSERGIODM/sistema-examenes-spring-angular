@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+  <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu_books</mat-icon>
+  </a>
+  <span>Portal examenes</span>
+  <span class="example-spacer"></span>
+  <a [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon mr15porciento" aria-label="Example icon-button with heart icon">
+    Iniciar sesion
+  </a>
+
+  <a [routerLink]="'/singup'" mat-icon-button class="example-icon favorite-icon mr10porciento" aria-label="Example icon-button with heart icon">
+    Registrase
+  </a>
+
+</mat-toolbar>
