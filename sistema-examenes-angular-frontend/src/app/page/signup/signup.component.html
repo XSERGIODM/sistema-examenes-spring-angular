@@ -9,36 +9,37 @@
           Registrate aquí
         </h1>
         <form (ngSubmit)="formSubmit()">
+
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Ingrese un usuario</mat-label>
-            <input [(ngModel)]="user.username" name="username" type="text" matInput placeholder="Digite un usuario">
-
+            <input required [(ngModel)]="user.username" name="username" type="text" matInput placeholder="Digite un usuario">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Ingrese una contraseña</mat-label>
-            <input [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Digite una cotraseña">
+            <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Digite una cotraseña">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Ingrese su nombres</mat-label>
-            <input [(ngModel)]="user.nombre" name="nombres" type="text" matInput placeholder="Digite su nombres">
+            <input required [(ngModel)]="user.nombre" name="nombres" type="text" matInput placeholder="Digite su nombres">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Ingrese su apellidos</mat-label>
-            <input [(ngModel)]="user.apellido" name="apellidos" type="text" matInput placeholder="Digite su apellidos">
+            <input required [(ngModel)]="user.apellido" name="apellidos" type="text" matInput placeholder="Digite su apellidos">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Ingrese su numero de telefono</mat-label>
-            <input [(ngModel)]="user.telefono" name="telefono" type="tel" matInput placeholder="Digite su numero de telefono">
+            <input required [(ngModel)]="user.telefono" name="telefono" type="tel" matInput placeholder="Digite su numero de telefono">
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Ingrese su email</mat-label>
-            <input [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Digite su email">
+            <input required [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Digite su email">
           </mat-form-field>
+
           <div class="container text-center">
             <button mat-raised-button color="primary" type="submit">
               Registrar
